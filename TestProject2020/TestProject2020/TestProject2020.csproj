@@ -1,8 +1,261 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>88aa74ad-17a8-4d98-9e59-bf9acb1a2736</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="node_modules\angular\angular-csp.css" />
+    <Content Include="node_modules\angular\bower.json" />
+    <Content Include="node_modules\angular\package.json" />
+    <Content Include="node_modules\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="node_modules\jquery\AUTHORS.txt" />
+    <Content Include="node_modules\jquery\bower.json" />
+    <Content Include="node_modules\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="node_modules\jquery\LICENSE.txt" />
+    <Content Include="node_modules\jquery\package.json" />
+    <Content Include="node_modules\popper.js\package.json" />
+    <Content Include="Scripts\app\app.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="angularjs" Version="1.7.8.1" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BAL\BAL.csproj" />
+    <ProjectReference Include="..\DAL\DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="node_modules\angular\angular.js" />
+    <None Include="node_modules\angular\angular.min.js" />
+    <None Include="node_modules\angular\angular.min.js.gzip" />
+    <None Include="node_modules\angular\angular.min.js.map" />
+    <None Include="node_modules\angular\index.js" />
+    <None Include="node_modules\angular\LICENSE.md" />
+    <None Include="node_modules\angular\README.md" />
+    <None Include="node_modules\jquery\dist\jquery.js" />
+    <None Include="node_modules\jquery\dist\jquery.min.js" />
+    <None Include="node_modules\jquery\dist\jquery.min.map" />
+    <None Include="node_modules\jquery\dist\jquery.slim.js" />
+    <None Include="node_modules\jquery\dist\jquery.slim.min.js" />
+    <None Include="node_modules\jquery\dist\jquery.slim.min.map" />
+    <None Include="node_modules\jquery\external\sizzle\dist\sizzle.js" />
+    <None Include="node_modules\jquery\external\sizzle\dist\sizzle.min.js" />
+    <None Include="node_modules\jquery\external\sizzle\dist\sizzle.min.map" />
+    <None Include="node_modules\jquery\README.md" />
+    <None Include="node_modules\jquery\src\ajax.js" />
+    <None Include="node_modules\jquery\src\ajax\jsonp.js" />
+    <None Include="node_modules\jquery\src\ajax\load.js" />
+    <None Include="node_modules\jquery\src\ajax\script.js" />
+    <None Include="node_modules\jquery\src\ajax\var\location.js" />
+    <None Include="node_modules\jquery\src\ajax\var\nonce.js" />
+    <None Include="node_modules\jquery\src\ajax\var\rquery.js" />
+    <None Include="node_modules\jquery\src\ajax\xhr.js" />
+    <None Include="node_modules\jquery\src\attributes.js" />
+    <None Include="node_modules\jquery\src\attributes\attr.js" />
+    <None Include="node_modules\jquery\src\attributes\classes.js" />
+    <None Include="node_modules\jquery\src\attributes\prop.js" />
+    <None Include="node_modules\jquery\src\attributes\support.js" />
+    <None Include="node_modules\jquery\src\attributes\val.js" />
+    <None Include="node_modules\jquery\src\callbacks.js" />
+    <None Include="node_modules\jquery\src\core.js" />
+    <None Include="node_modules\jquery\src\core\access.js" />
+    <None Include="node_modules\jquery\src\core\camelCase.js" />
+    <None Include="node_modules\jquery\src\core\DOMEval.js" />
+    <None Include="node_modules\jquery\src\core\init.js" />
+    <None Include="node_modules\jquery\src\core\isAttached.js" />
+    <None Include="node_modules\jquery\src\core\nodeName.js" />
+    <None Include="node_modules\jquery\src\core\parseHTML.js" />
+    <None Include="node_modules\jquery\src\core\parseXML.js" />
+    <None Include="node_modules\jquery\src\core\ready-no-deferred.js" />
+    <None Include="node_modules\jquery\src\core\ready.js" />
+    <None Include="node_modules\jquery\src\core\readyException.js" />
+    <None Include="node_modules\jquery\src\core\stripAndCollapse.js" />
+    <None Include="node_modules\jquery\src\core\support.js" />
+    <None Include="node_modules\jquery\src\core\toType.js" />
+    <None Include="node_modules\jquery\src\core\var\rsingleTag.js" />
+    <None Include="node_modules\jquery\src\css.js" />
+    <None Include="node_modules\jquery\src\css\addGetHookIf.js" />
+    <None Include="node_modules\jquery\src\css\adjustCSS.js" />
+    <None Include="node_modules\jquery\src\css\curCSS.js" />
+    <None Include="node_modules\jquery\src\css\finalPropName.js" />
+    <None Include="node_modules\jquery\src\css\hiddenVisibleSelectors.js" />
+    <None Include="node_modules\jquery\src\css\showHide.js" />
+    <None Include="node_modules\jquery\src\css\support.js" />
+    <None Include="node_modules\jquery\src\css\var\cssExpand.js" />
+    <None Include="node_modules\jquery\src\css\var\getStyles.js" />
+    <None Include="node_modules\jquery\src\css\var\isHiddenWithinTree.js" />
+    <None Include="node_modules\jquery\src\css\var\rboxStyle.js" />
+    <None Include="node_modules\jquery\src\css\var\rnumnonpx.js" />
+    <None Include="node_modules\jquery\src\css\var\swap.js" />
+    <None Include="node_modules\jquery\src\data.js" />
+    <None Include="node_modules\jquery\src\data\Data.js" />
+    <None Include="node_modules\jquery\src\data\var\acceptData.js" />
+    <None Include="node_modules\jquery\src\data\var\dataPriv.js" />
+    <None Include="node_modules\jquery\src\data\var\dataUser.js" />
+    <None Include="node_modules\jquery\src\deferred.js" />
+    <None Include="node_modules\jquery\src\deferred\exceptionHook.js" />
+    <None Include="node_modules\jquery\src\deprecated.js" />
+    <None Include="node_modules\jquery\src\deprecated\ajax-event-alias.js" />
+    <None Include="node_modules\jquery\src\deprecated\event.js" />
+    <None Include="node_modules\jquery\src\dimensions.js" />
+    <None Include="node_modules\jquery\src\effects.js" />
+    <None Include="node_modules\jquery\src\effects\animatedSelector.js" />
+    <None Include="node_modules\jquery\src\effects\Tween.js" />
+    <None Include="node_modules\jquery\src\event.js" />
+    <None Include="node_modules\jquery\src\event\focusin.js" />
+    <None Include="node_modules\jquery\src\event\support.js" />
+    <None Include="node_modules\jquery\src\event\trigger.js" />
+    <None Include="node_modules\jquery\src\exports\amd.js" />
+    <None Include="node_modules\jquery\src\exports\global.js" />
+    <None Include="node_modules\jquery\src\jquery.js" />
+    <None Include="node_modules\jquery\src\manipulation.js" />
+    <None Include="node_modules\jquery\src\manipulation\buildFragment.js" />
+    <None Include="node_modules\jquery\src\manipulation\getAll.js" />
+    <None Include="node_modules\jquery\src\manipulation\setGlobalEval.js" />
+    <None Include="node_modules\jquery\src\manipulation\support.js" />
+    <None Include="node_modules\jquery\src\manipulation\var\rscriptType.js" />
+    <None Include="node_modules\jquery\src\manipulation\var\rtagName.js" />
+    <None Include="node_modules\jquery\src\manipulation\wrapMap.js" />
+    <None Include="node_modules\jquery\src\manipulation\_evalUrl.js" />
+    <None Include="node_modules\jquery\src\offset.js" />
+    <None Include="node_modules\jquery\src\queue.js" />
+    <None Include="node_modules\jquery\src\queue\delay.js" />
+    <None Include="node_modules\jquery\src\selector-native.js" />
+    <None Include="node_modules\jquery\src\selector-sizzle.js" />
+    <None Include="node_modules\jquery\src\selector.js" />
+    <None Include="node_modules\jquery\src\serialize.js" />
+    <None Include="node_modules\jquery\src\traversing.js" />
+    <None Include="node_modules\jquery\src\traversing\findFilter.js" />
+    <None Include="node_modules\jquery\src\traversing\var\dir.js" />
+    <None Include="node_modules\jquery\src\traversing\var\rneedsContext.js" />
+    <None Include="node_modules\jquery\src\traversing\var\siblings.js" />
+    <None Include="node_modules\jquery\src\var\arr.js" />
+    <None Include="node_modules\jquery\src\var\class2type.js" />
+    <None Include="node_modules\jquery\src\var\document.js" />
+    <None Include="node_modules\jquery\src\var\documentElement.js" />
+    <None Include="node_modules\jquery\src\var\flat.js" />
+    <None Include="node_modules\jquery\src\var\fnToString.js" />
+    <None Include="node_modules\jquery\src\var\getProto.js" />
+    <None Include="node_modules\jquery\src\var\hasOwn.js" />
+    <None Include="node_modules\jquery\src\var\indexOf.js" />
+    <None Include="node_modules\jquery\src\var\isFunction.js" />
+    <None Include="node_modules\jquery\src\var\isWindow.js" />
+    <None Include="node_modules\jquery\src\var\ObjectFunctionString.js" />
+    <None Include="node_modules\jquery\src\var\pnum.js" />
+    <None Include="node_modules\jquery\src\var\push.js" />
+    <None Include="node_modules\jquery\src\var\rcheckableType.js" />
+    <None Include="node_modules\jquery\src\var\rcssNum.js" />
+    <None Include="node_modules\jquery\src\var\rnothtmlwhite.js" />
+    <None Include="node_modules\jquery\src\var\slice.js" />
+    <None Include="node_modules\jquery\src\var\support.js" />
+    <None Include="node_modules\jquery\src\var\toString.js" />
+    <None Include="node_modules\jquery\src\wrap.js" />
+    <None Include="node_modules\popper.js\dist\esm\popper-utils.js" />
+    <None Include="node_modules\popper.js\dist\esm\popper-utils.js.map" />
+    <None Include="node_modules\popper.js\dist\esm\popper-utils.min.js" />
+    <None Include="node_modules\popper.js\dist\esm\popper-utils.min.js.map" />
+    <None Include="node_modules\popper.js\dist\esm\popper.js" />
+    <None Include="node_modules\popper.js\dist\esm\popper.js.map" />
+    <None Include="node_modules\popper.js\dist\esm\popper.min.js" />
+    <None Include="node_modules\popper.js\dist\esm\popper.min.js.map" />
+    <None Include="node_modules\popper.js\dist\popper-utils.js" />
+    <None Include="node_modules\popper.js\dist\popper-utils.js.map" />
+    <None Include="node_modules\popper.js\dist\popper-utils.min.js" />
+    <None Include="node_modules\popper.js\dist\popper-utils.min.js.map" />
+    <None Include="node_modules\popper.js\dist\popper.js" />
+    <None Include="node_modules\popper.js\dist\popper.js.map" />
+    <None Include="node_modules\popper.js\dist\popper.min.js" />
+    <None Include="node_modules\popper.js\dist\popper.min.js.map" />
+    <None Include="node_modules\popper.js\dist\umd\popper-utils.js" />
+    <None Include="node_modules\popper.js\dist\umd\popper-utils.js.map" />
+    <None Include="node_modules\popper.js\dist\umd\popper-utils.min.js" />
+    <None Include="node_modules\popper.js\dist\umd\popper-utils.min.js.map" />
+    <None Include="node_modules\popper.js\dist\umd\popper.js" />
+    <None Include="node_modules\popper.js\dist\umd\popper.js.flow" />
+    <None Include="node_modules\popper.js\dist\umd\popper.js.map" />
+    <None Include="node_modules\popper.js\dist\umd\popper.min.js" />
+    <None Include="node_modules\popper.js\dist\umd\popper.min.js.map" />
+    <None Include="node_modules\popper.js\index.js.flow" />
+    <None Include="node_modules\popper.js\README.md" />
+    <None Include="node_modules\popper.js\src\index.js" />
+    <None Include="node_modules\popper.js\src\methods\defaults.js" />
+    <None Include="node_modules\popper.js\src\methods\destroy.js" />
+    <None Include="node_modules\popper.js\src\methods\disableEventListeners.js" />
+    <None Include="node_modules\popper.js\src\methods\enableEventListeners.js" />
+    <None Include="node_modules\popper.js\src\methods\placements.js" />
+    <None Include="node_modules\popper.js\src\methods\update.js" />
+    <None Include="node_modules\popper.js\src\modifiers\applyStyle.js" />
+    <None Include="node_modules\popper.js\src\modifiers\arrow.js" />
+    <None Include="node_modules\popper.js\src\modifiers\computeStyle.js" />
+    <None Include="node_modules\popper.js\src\modifiers\flip.js" />
+    <None Include="node_modules\popper.js\src\modifiers\hide.js" />
+    <None Include="node_modules\popper.js\src\modifiers\index.js" />
+    <None Include="node_modules\popper.js\src\modifiers\inner.js" />
+    <None Include="node_modules\popper.js\src\modifiers\keepTogether.js" />
+    <None Include="node_modules\popper.js\src\modifiers\offset.js" />
+    <None Include="node_modules\popper.js\src\modifiers\preventOverflow.js" />
+    <None Include="node_modules\popper.js\src\modifiers\shift.js" />
+    <None Include="node_modules\popper.js\src\utils\clockwise.js" />
+    <None Include="node_modules\popper.js\src\utils\computeAutoPlacement.js" />
+    <None Include="node_modules\popper.js\src\utils\debounce.js" />
+    <None Include="node_modules\popper.js\src\utils\find.js" />
+    <None Include="node_modules\popper.js\src\utils\findCommonOffsetParent.js" />
+    <None Include="node_modules\popper.js\src\utils\findIndex.js" />
+    <None Include="node_modules\popper.js\src\utils\getBordersSize.js" />
+    <None Include="node_modules\popper.js\src\utils\getBoundaries.js" />
+    <None Include="node_modules\popper.js\src\utils\getBoundingClientRect.js" />
+    <None Include="node_modules\popper.js\src\utils\getClientRect.js" />
+    <None Include="node_modules\popper.js\src\utils\getFixedPositionOffsetParent.js" />
+    <None Include="node_modules\popper.js\src\utils\getOffsetParent.js" />
+    <None Include="node_modules\popper.js\src\utils\getOffsetRect.js" />
+    <None Include="node_modules\popper.js\src\utils\getOffsetRectRelativeToArbitraryNode.js" />
+    <None Include="node_modules\popper.js\src\utils\getOppositePlacement.js" />
+    <None Include="node_modules\popper.js\src\utils\getOppositeVariation.js" />
+    <None Include="node_modules\popper.js\src\utils\getOuterSizes.js" />
+    <None Include="node_modules\popper.js\src\utils\getParentNode.js" />
+    <None Include="node_modules\popper.js\src\utils\getPopperOffsets.js" />
+    <None Include="node_modules\popper.js\src\utils\getReferenceNode.js" />
+    <None Include="node_modules\popper.js\src\utils\getReferenceOffsets.js" />
+    <None Include="node_modules\popper.js\src\utils\getRoot.js" />
+    <None Include="node_modules\popper.js\src\utils\getRoundedOffsets.js" />
+    <None Include="node_modules\popper.js\src\utils\getScroll.js" />
+    <None Include="node_modules\popper.js\src\utils\getScrollParent.js" />
+    <None Include="node_modules\popper.js\src\utils\getStyleComputedProperty.js" />
+    <None Include="node_modules\popper.js\src\utils\getSupportedPropertyName.js" />
+    <None Include="node_modules\popper.js\src\utils\getViewportOffsetRectRelativeToArtbitraryNode.js" />
+    <None Include="node_modules\popper.js\src\utils\getWindow.js" />
+    <None Include="node_modules\popper.js\src\utils\getWindowSizes.js" />
+    <None Include="node_modules\popper.js\src\utils\includeScroll.js" />
+    <None Include="node_modules\popper.js\src\utils\index.js" />
+    <None Include="node_modules\popper.js\src\utils\isBrowser.js" />
+    <None Include="node_modules\popper.js\src\utils\isFixed.js" />
+    <None Include="node_modules\popper.js\src\utils\isFunction.js" />
+    <None Include="node_modules\popper.js\src\utils\isIE.js" />
+    <None Include="node_modules\popper.js\src\utils\isModifierEnabled.js" />
+    <None Include="node_modules\popper.js\src\utils\isModifierRequired.js" />
+    <None Include="node_modules\popper.js\src\utils\isNumeric.js" />
+    <None Include="node_modules\popper.js\src\utils\isOffsetContainer.js" />
+    <None Include="node_modules\popper.js\src\utils\removeEventListeners.js" />
+    <None Include="node_modules\popper.js\src\utils\runModifiers.js" />
+    <None Include="node_modules\popper.js\src\utils\setAttributes.js" />
+    <None Include="node_modules\popper.js\src\utils\setStyles.js" />
+    <None Include="node_modules\popper.js\src\utils\setupEventListeners.js" />
+    <None Include="wwwroot\views\modalContent.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="node_modules\popper.js\index.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Scripts\app\css\" />
+  </ItemGroup>
 
 
 </Project>

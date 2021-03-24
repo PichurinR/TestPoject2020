@@ -1,0 +1,19 @@
+﻿<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <link href="~/lib/css/vendor.min.css" rel="stylesheet" />
+</head>
+<body ng-controller="ModalCtrl">
+    <div class="container">
+        <div class="row">
+            <button class="btn btn-info" ng-click="open()">Open Modal</button>
+            <div>Ans:</div>
+            <p ng-bind="result"></p>
+        </div>
+    </div>
+    <script src="~/lib/js/vendor.min.js"></script>
+    <script src="~/lib/js/app.min.js"></script>
+    <script src="~/lib/bundleControllers.js"></script>
+</body>
+</html>

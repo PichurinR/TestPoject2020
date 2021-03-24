@@ -1,0 +1,39 @@
+[
+  {
+    "outputFileName": "wwwroot/lib/css/vendor.min.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/lib/js/vendor.min.js",
+    "inputFiles": [
+      "node_modules/jquery/dist/jquery.min.js",
+      "node_modules/popper.js/dist/umd/popper.min.js",
+      "node_modules/bootstrap/dist/js/bootstrap.min.js",
+      "node_modules/angular/angular.min.js",
+      "node_modules/angular-animate/angular-animate.js",
+      "node_modules/angular-touch/angular-touch.js,",
+      "node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/lib/js/app.min.js",
+    "inputFiles": [
+      "Scripts/app/app.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bundleControllers.js",
+    "inputFiles": [
+      "Scripts/app/js/controllers/modalController.js"
+    ]
+  }
+]
